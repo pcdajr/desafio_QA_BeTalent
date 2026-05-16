@@ -1,0 +1,438 @@
+{
+  "info": {
+    "_postman_id": "bec54529-1c52-4b14-b46f-d79b95e17107",
+    "name": "Restfull Booker",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "5510092"
+  },
+  "item": [
+    {
+      "name": "Login",
+      "item": [
+        {
+          "name": "Auth - CreateToken",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "// 1. Converte o corpo da resposta para um objeto JSON que o Postman entende\r",
+                  "const resposta = pm.response.json();\r",
+                  "\r",
+                  "// 2. Pega o valor que está dentro do campo \"token\"\r",
+                  "const meuToken = resposta.token;\r",
+                  "\r",
+                  "// 3. Salva esse valor na variável de ambiente que você criou\r",
+                  "pm.environment.set(\"TOKEN\", meuToken);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"username\" : \"admin\",\r\n    \"password\" : \"password123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/auth",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "auth"
+              ]
+            },
+            "description": "Generated from cURL: curl -X POST \\\r\n  https://restful-booker.herokuapp.com/auth \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n    \"username\" : \"admin\",\r\n    \"password\" : \"password123\"\r\n}'"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Find Booking",
+      "item": [
+        {
+          "name": "Get All IDs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/booking",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "booking"
+              ]
+            },
+            "description": "Generated from cURL: curl -i https://restful-booker.herokuapp.com/booking"
+          },
+          "response": []
+        },
+        {
+          "name": "Filter by name",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/booking?firstname=&lastname=",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "booking"
+              ],
+              "query": [
+                {
+                  "key": "firstname",
+                  "value": ""
+                },
+                {
+                  "key": "lastname",
+                  "value": ""
+                }
+              ]
+            },
+            "description": "Generated from cURL: curl -i https://restful-booker.herokuapp.com/booking?firstname=sally&lastname=brown"
+          },
+          "response": []
+        },
+        {
+          "name": "Filter by checkin/checkout date",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/booking?checkin=2020-01-01&checkout=2019-01-01",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "booking"
+              ],
+              "query": [
+                {
+                  "key": "checkin",
+                  "value": "2020-01-01"
+                },
+                {
+                  "key": "checkout",
+                  "value": "2019-01-01"
+                }
+              ]
+            },
+            "description": "Generated from cURL: curl -i https://restful-booker.herokuapp.com/booking?checkin=2014-03-13&checkout=2014-05-21"
+          },
+          "response": []
+        },
+        {
+          "name": "Get booking Id (environment)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/booking/{{BOOKING_ID}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "booking",
+                "{{BOOKING_ID}}"
+              ]
+            },
+            "description": "Generated from cURL: curl -i https://restful-booker.herokuapp.com/booking/1"
+          },
+          "response": []
+        },
+        {
+          "name": "Get booking Id (manual search)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL}}/booking/:id",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "booking",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": ""
+                }
+              ]
+            },
+            "description": "Generated from cURL: curl -i https://restful-booker.herokuapp.com/booking/1"
+          },
+          "response": []
+        }
+      ],
+      "description": "Filtros para encontrar reserva ou listar reservas."
+    },
+    {
+      "name": "Cancel Booking",
+      "item": [
+        {
+          "name": "Delete Booking Basic Auth",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Basic YWRtaW46cGFzc3dvcmQxMjM="
+              }
+            ],
+            "url": {
+              "raw": "{{BASE_URL}}/booking/{{BOOKING_ID}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "booking",
+                "{{BOOKING_ID}}"
+              ]
+            },
+            "description": "Generated from cURL: curl -X DELETE \\\r\n  https://restful-booker.herokuapp.com/booking/1 \\\r\n  -H 'Content-Type: application/json' \\\r\n  -H 'Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM='"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Booking Cookies",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Cookie",
+                "value": "token={{TOKEN}}"
+              }
+            ],
+            "url": {
+              "raw": "{{BASE_URL}}/booking/{{BOOKING_ID}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "booking",
+                "{{BOOKING_ID}}"
+              ]
+            },
+            "description": "Generated from cURL: curl -X DELETE \\\r\n  https://restful-booker.herokuapp.com/booking/1 \\\r\n  -H 'Content-Type: application/json' \\\r\n  -H 'Cookie: token=abc123'"
+          },
+          "response": []
+        }
+      ],
+      "description": "Endpoints de cancelamento de reserva com diferentes tipos de autenticação"
+    },
+    {
+      "name": "New Reservation",
+      "item": [
+        {
+          "name": "Create Booking",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const resposta = pm.response.json();\r",
+                  "pm.environment.set(\"BOOKING_ID\", resposta.bookingid);\r",
+                  "\r",
+                  "/*Criando uma variável pra capturar dinâmicamente o ID\r",
+                  " de cada reserva criada.\r",
+                  " E usar no métodos que precise do ID executando os verbos.    */  "
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"firstname\" : \"Paulo\",\r\n    \"lastname\" : \"César\",\r\n    \"totalprice\" : 111,\r\n    \"depositpaid\" : true,\r\n    \"bookingdates\" : {\r\n        \"checkin\" : \"2020-01-01\",\r\n        \"checkout\" : \"2020-01-05\"\r\n    },\r\n    \"additionalneeds\" : \"Breakfast\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/booking",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "booking"
+              ]
+            },
+            "description": "Generated from cURL: curl -X POST \\\r\n  https://restful-booker.herokuapp.com/booking \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n    \"firstname\" : \"Jim\",\r\n    \"lastname\" : \"Brown\",\r\n    \"totalprice\" : 111,\r\n    \"depositpaid\" : true,\r\n    \"bookingdates\" : {\r\n        \"checkin\" : \"2018-01-01\",\r\n        \"checkout\" : \"2019-01-01\"\r\n    },\r\n    \"additionalneeds\" : \"Breakfast\"\r\n}'"
+          },
+          "response": []
+        }
+      ],
+      "description": "Endpoint para criação de reserva."
+    },
+    {
+      "name": "Edit Booking",
+      "item": [
+        {
+          "name": "Update Booking",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Cookie",
+                "value": "token={{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"firstname\" : \"Kimi2\",\r\n    \"lastname\" : \"Brown\",\r\n    \"totalprice\" : 111,\r\n    \"depositpaid\" : true,\r\n    \"bookingdates\" : {\r\n        \"checkin\" : \"2018-01-01\",\r\n        \"checkout\" : \"2019-01-01\"\r\n    },\r\n    \"additionalneeds\" : \"Breakfast\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/booking/{{BOOKING_ID}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "booking",
+                "{{BOOKING_ID}}"
+              ]
+            },
+            "description": "Generated from cURL: curl -X PUT \\\r\n  https://restful-booker.herokuapp.com/booking/1 \\\r\n  -H 'Content-Type: application/json' \\\r\n  -H 'Accept: application/json' \\\r\n  -H 'Cookie: token=abc123' \\\r\n  -d '{\r\n    \"firstname\" : \"James\",\r\n    \"lastname\" : \"Brown\",\r\n    \"totalprice\" : 111,\r\n    \"depositpaid\" : true,\r\n    \"bookingdates\" : {\r\n        \"checkin\" : \"2018-01-01\",\r\n        \"checkout\" : \"2019-01-01\"\r\n    },\r\n    \"additionalneeds\" : \"Breakfast\"\r\n}'"
+          },
+          "response": []
+        },
+        {
+          "name": "Partial Update Booking",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Cookie",
+                "value": "token={{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"firstname\" : \"James\",\r\n    \"lastname\" : \"Brown\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/booking/{{BOOKING_ID}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "booking",
+                "{{BOOKING_ID}}"
+              ]
+            },
+            "description": "Generated from cURL: curl -X PUT \\\r\n  https://restful-booker.herokuapp.com/booking/1 \\\r\n  -H 'Content-Type: application/json' \\\r\n  -H 'Accept: application/json' \\\r\n  -H 'Cookie: token=abc123' \\\r\n  -d '{\r\n    \"firstname\" : \"James\",\r\n    \"lastname\" : \"Brown\"\r\n}'"
+          },
+          "response": []
+        },
+        {
+          "name": "Partial Update Booking ( individual attribute test )",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Cookie",
+                "value": "token={{TOKEN}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"totalprice\" : 116\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/booking/{{BOOKING_ID}}",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "booking",
+                "{{BOOKING_ID}}"
+              ]
+            },
+            "description": "Generated from cURL: curl -X PUT \\\r\n  https://restful-booker.herokuapp.com/booking/1 \\\r\n  -H 'Content-Type: application/json' \\\r\n  -H 'Accept: application/json' \\\r\n  -H 'Cookie: token=abc123' \\\r\n  -d '{\r\n    \"firstname\" : \"James\",\r\n    \"lastname\" : \"Brown\"\r\n}'"
+          },
+          "response": []
+        }
+      ],
+      "description": "Endpoints para atualizar reservas , 1 para atualizar todo o objeto de reserva e outro para atualizar somente os donos da reserva. Na documentação o endpoint Partial poderia estar como Patch mas seu curl veio como PUT ."
+    }
+  ]
+}
