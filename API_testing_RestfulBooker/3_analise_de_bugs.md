@@ -1,4 +1,8 @@
 
+## BUGS RASTREADOS MANUALMENTE
+![alt text](image.png)
+![alt text](image-1.png)
+
 ## Ranking das funcionalidades com maior impacto de bugs
 
 | Ranking | Funcionalidade              | Total de casos | FAIL | % Erro real | Classificação do risco | Justificativa                                                                                                                                                                                                                                                              |
