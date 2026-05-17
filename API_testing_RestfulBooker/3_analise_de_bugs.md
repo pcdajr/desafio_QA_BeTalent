@@ -1,7 +1,7 @@
 
 ## BUGS RASTREADOS MANUALMENTE
-![alt text](API_testing_RestfulBooker/evidencias/_docs/image.png)
-![alt text](pcdajr/desafio_QA_BeTalent/API_testing_RestfulBooker/evidencias/_docs/image-1.png)
+![alt text](evidencias/_docs/image.png)
+![alt text](evidencias/_docs/image-1.png)
 
 ## Ranking das funcionalidades com maior impacto de bugs
 

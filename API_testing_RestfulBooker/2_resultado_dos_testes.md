@@ -7,35 +7,35 @@ A prioridade dos casos de teste foi definida considerando o impacto no fluxo pri
 - **Baixa:** cenários complementares ou de menor impacto para o funcionamento principal da API.
 
 ## LOGIN
-![alt text](image-2.png)
+![alt text](evidencias/_docs/image-2.png)
 
 ##
 ## NEW RESERVATION
 
-![alt text](image-4.png)
-![alt text](image-5.png)
-![alt text](image-6.png)
-![alt text](image-7.png)
+![alt text](evidencias/_docs/image-4.png)
+![alt text](evidencias/_docs/image-5.png)
+![alt text](evidencias/_docs/image-6.png)
+![alt text](evidencias/_docs/image-7.png)
 
 ##
 ## FIND BOOKING
 
-![alt text](image-8.png)
-![alt text](image-9.png)
+![alt text](evidencias/_docs/image-8.png)
+![alt text](evidencias/_docs/image-9.png)
 
 ##
 ## EDIT BOOKING
 
-![alt text](image-10.png)
-![alt text](image-11.png)
-![alt text](image-12.png)
-![alt text](image-13.png)
-![alt text](image-14.png)
-![alt text](image-15.png)
+![alt text](evidencias/_docs/image-10.png)
+![alt text](evidencias/_docs/image-11.png)
+![alt text](evidencias/_docs/image-12.png)
+![alt text](evidencias/_docs/image-13.png)
+![alt text](evidencias/_docs/image-14.png)
+![alt text](evidencias/_docs/image-15.png)
 
 ##
 ## DELETE BOOKING
 
-![alt text](image-16.png)
+![alt text](evidencias/_docs/image-16.png)
 
 
