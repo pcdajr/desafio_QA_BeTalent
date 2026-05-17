@@ -1,7 +1,8 @@
 
 ## BUGS RASTREADOS MANUALMENTE
-![alt text](evidencias/_docs/image.png)
-![alt text](evidencias/_docs/image-1.png)
+<img width="971" height="786" alt="image" src="https://github.com/user-attachments/assets/7170a1bc-5a49-4f1e-821a-ba4184c622cf" />
+<img width="969" height="636" alt="image" src="https://github.com/user-attachments/assets/d1c63e6d-f42a-4485-80bb-6ecc79d7c416" />
+
 
 ## Ranking das funcionalidades com maior impacto de bugs
 
