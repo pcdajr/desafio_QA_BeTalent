@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-05-03T05:11:23.174Z",
+    "end": "2026-05-03T05:11:29.554Z",
+    "duration": 6380,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1da2cf08-9054-44bd-9675-5b85fc1b6775",
+      "title": "",
+      "fullFile": "cypress\\e2e\\_tela_produtos_carrinho\\ct11_verificar_filtros_produtos.cy.js",
+      "file": "cypress\\e2e\\_tela_produtos_carrinho\\ct11_verificar_filtros_produtos.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1c2b239a-7421-41e4-a9db-33af5c4ba97c",
+          "title": "Tela de produtos - Saucedemo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validando filtros na lista de produtos",
+              "fullTitle": "Tela de produtos - Saucedemo Validando filtros na lista de produtos",
+              "timedOut": null,
+              "duration": 6260,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-test=\"username\"]').type(\"error_user\"); //inserindo nome\ncy.get('[data-test=\"password\"]').type(\"secret_sauce\"); //inserindo senha   \ncy.get('[data-test=\"login-button\"]').click(); //clicando\n// Aqui só pelos valores dentro do <option> a lista suspensa no html, pelo elemento do cypress não consegui.\ncy.get('[data-test=\"product-sort-container\"]').select('lohi');\ncy.contains('Sorting is broken! This error has been reported to Backtrace.').should('exist');\ncy.get('[data-test=\"product-sort-container\"]').select('za');\ncy.contains('Sorting is broken! This error has been reported to Backtrace.').should('exist');\ncy.get('[data-test=\"product-sort-container\"]').select('az');\ncy.contains('Sorting is broken! This error has been reported to Backtrace.').should('exist');\ncy.get('[data-test=\"product-sort-container\"]').select('hilo');\ncy.contains('Sorting is broken! This error has been reported to Backtrace.').should('exist');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Sorting is broken! This error has been reported to Backtrace.' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Sorting is broken! This error has been reported to Backtrace.' but never did.\n    at Context.eval (webpack://qa_interface_e2e/./cypress/e2e/_tela_produtos_carrinho/ct11_verificar_filtros_produtos.cy.js:18:81)",
+                "diff": null
+              },
+              "uuid": "287c6ebb-0069-4fbf-bb4c-2be74e427443",
+              "parentUUID": "1c2b239a-7421-41e4-a9db-33af5c4ba97c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "287c6ebb-0069-4fbf-bb4c-2be74e427443"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6260,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.3.2"
+    }
+  }
+}

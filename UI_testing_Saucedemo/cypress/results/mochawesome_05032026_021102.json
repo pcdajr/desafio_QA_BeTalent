@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-05-03T05:10:58.618Z",
+    "end": "2026-05-03T05:11:02.336Z",
+    "duration": 3718,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "74d752de-b969-4690-bd90-e51d1d2fa214",
+      "title": "",
+      "fullFile": "cypress\\e2e\\_tela_produtos_carrinho\\ct08_remove_cart.cy.js",
+      "file": "cypress\\e2e\\_tela_produtos_carrinho\\ct08_remove_cart.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1d232056-f5c7-4fd6-8b53-2a9891d527cc",
+          "title": "Tela de produtos - Saucedemo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Remover itens do carrinho e testar notificação da quantidade no cart",
+              "fullTitle": "Tela de produtos - Saucedemo Remover itens do carrinho e testar notificação da quantidade no cart",
+              "timedOut": null,
+              "duration": 3576,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-test=\"username\"]').type(\"standard_user\"); //inserindo nome\ncy.get('[data-test=\"password\"]').type(\"secret_sauce\"); //inserindo senha   \ncy.get('[data-test=\"login-button\"]').click(); //clicando\n//ADICIONANDO ITENS AO CARRINHO NOVAMENTE PARA TESTAR A REMOÇÃO.\ncy.get('[data-test^=\"add-to-cart\"]').each((elemento, indice) => {\n  const comparador = indice + 1;\n  cy.wrap(elemento).should(\"be.visible\").and(\"have.text\", 'Add to cart').click();\n  cy.get('[data-test=\"shopping-cart-badge\"]').should(\"exist\").and(\"be.visible\").and('have.text', comparador.toString());\n});\n// REMOVENDO ITENS DO CARRINHO\ncy.get('[data-test^=\"remove\"]').each((elemento, indice) => {\n  cy.wrap(elemento).should(\"be.visible\").and(\"have.text\", 'Remove').click();\n});\ncy.get('[data-test=\"shopping-cart-badge\"]').should('not.exist');",
+              "err": {},
+              "uuid": "39b8cf56-c528-4d24-ac0c-babc0dea2ab3",
+              "parentUUID": "1d232056-f5c7-4fd6-8b53-2a9891d527cc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "39b8cf56-c528-4d24-ac0c-babc0dea2ab3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3576,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.3.2"
+    }
+  }
+}

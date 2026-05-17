@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-05-03T05:12:33.273Z",
+    "end": "2026-05-03T05:12:34.928Z",
+    "duration": 1655,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "72793955-e58b-4272-819c-b01a7d02a0f4",
+      "title": "",
+      "fullFile": "cypress\\e2e\\_login\\ct02_user_bloqueado.cy.js",
+      "file": "cypress\\e2e\\_login\\ct02_user_bloqueado.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7a3edda4-bbc6-479f-8d06-5a5d91034280",
+          "title": "Página de login Saucedemo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login bloqueado - não deve entrar no sistema",
+              "fullTitle": "Página de login Saucedemo Login bloqueado - não deve entrar no sistema",
+              "timedOut": null,
+              "duration": 1529,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-test=\"username\"]').type(\"locked_out_user\");\ncy.get('[data-test=\"password\"]').type(\"secret_sauce\");\ncy.get('[data-test=\"login-button\"]').click();\ncy.get('[data-test=\"error\"]').should('be.visible').and('contain', 'Epic sadface: Sorry, this user has been locked out');",
+              "err": {},
+              "uuid": "860a5c59-3984-46b3-9692-8293fac843e0",
+              "parentUUID": "7a3edda4-bbc6-479f-8d06-5a5d91034280",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "860a5c59-3984-46b3-9692-8293fac843e0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1529,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.3.2"
+    }
+  }
+}

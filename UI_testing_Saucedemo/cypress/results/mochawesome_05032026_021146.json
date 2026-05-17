@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-05-03T05:11:42.082Z",
+    "end": "2026-05-03T05:11:46.144Z",
+    "duration": 4062,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f5694aed-d95c-4dbd-a368-b05501c4b6de",
+      "title": "",
+      "fullFile": "cypress\\e2e\\pagamento_checkout\\ct13_campos_validos.cy.js",
+      "file": "cypress\\e2e\\pagamento_checkout\\ct13_campos_validos.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7ab91121-da80-4052-9745-084e30cbdb21",
+          "title": "Página de confirmação, pagamento/checkout",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login válido",
+              "fullTitle": "Página de confirmação, pagamento/checkout Login válido",
+              "timedOut": null,
+              "duration": 3965,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-test=\"username\"]').type(\"standard_user\");\ncy.get('[data-test=\"password\"]').type(\"secret_sauce\");\ncy.get('[data-test=\"login-button\"]').click();\n//adicionando 2 produtos \ncy.get('[data-test=\"add-to-cart-sauce-labs-backpack\"]').click();\ncy.get('[data-test=\"add-to-cart-sauce-labs-fleece-jacket\"]').click();\n//clicando no carrrinho\ncy.get('[data-test=\"shopping-cart-link\"]').click();\n// clicando em checkout\ncy.get('[data-test=\"checkout\"]').click();\n// garantindo clicks com campos não preenchidos para a asserção.\ncy.get('[data-test=\"firstName\"]').type('Paulo');\ncy.get('[data-test=\"lastName\"]').type('Andrade');\ncy.get('[data-test=\"postalCode\"]').type('55443789');\ncy.get('[data-test=\"continue\"]').click();\n//Verificando a última página\ncy.get('[data-test=\"finish\"]').should('be.visible').and('contain.text', 'Finish').click();",
+              "err": {},
+              "uuid": "89f78947-aa59-43ec-b4c4-ee7164f1b7f3",
+              "parentUUID": "7ab91121-da80-4052-9745-084e30cbdb21",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "89f78947-aa59-43ec-b4c4-ee7164f1b7f3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3965,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.3.2"
+    }
+  }
+}

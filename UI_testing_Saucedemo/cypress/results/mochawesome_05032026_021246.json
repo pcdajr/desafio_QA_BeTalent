@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-05-03T05:12:45.402Z",
+    "end": "2026-05-03T05:12:46.332Z",
+    "duration": 930,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4d394055-ca7c-4b36-91d4-d3cc15681910",
+      "title": "",
+      "fullFile": "cypress\\e2e\\_login\\ct04_campos_vazios.cy.js",
+      "file": "cypress\\e2e\\_login\\ct04_campos_vazios.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f74ab1e5-216a-4988-8bd0-7aabb2e7bed8",
+          "title": "Página de login Saucedemo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Campos vazios - não deve entrar no sistema e aparecer balão de dicas",
+              "fullTitle": "Página de login Saucedemo Campos vazios - não deve entrar no sistema e aparecer balão de dicas",
+              "timedOut": null,
+              "duration": 833,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-test=\"username\"]').should('be.empty'); //garantindo os campos em vazios.  \ncy.get('[data-test=\"password\"]').should('be.empty');\ncy.get('[data-test=\"login-button\"]').click();\ncy.get('[data-test=\"error\"]') // Encontrando mensagem de erro de campos não preenchidos.\n.should('be.visible').and('contain', 'Epic sadface: Username is required');",
+              "err": {},
+              "uuid": "33273cbc-7e4b-4409-84e8-922d37608387",
+              "parentUUID": "f74ab1e5-216a-4988-8bd0-7aabb2e7bed8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "33273cbc-7e4b-4409-84e8-922d37608387"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 833,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.3.2"
+    }
+  }
+}

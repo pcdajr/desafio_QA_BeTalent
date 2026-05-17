@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-05-03T05:12:57.141Z",
+    "end": "2026-05-03T05:13:04.181Z",
+    "duration": 7040,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ccc52620-ec6d-49c2-a1ea-2c1f82fb0795",
+      "title": "",
+      "fullFile": "cypress\\e2e\\_login\\ct06_sob_perfomance.cy.js",
+      "file": "cypress\\e2e\\_login\\ct06_sob_perfomance.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "031909c1-40fc-4fa9-8239-4cf9e804b693",
+          "title": "Página de login Saucedemo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Usuário sob perfomance deve demorar mais que 5 segundos ",
+              "fullTitle": "Página de login Saucedemo Usuário sob perfomance deve demorar mais que 5 segundos ",
+              "timedOut": null,
+              "duration": 6963,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const tempoInicial = Date.now(); // Utilizando essa forma pois não tem API é um configuração no site do Saucedemo\ncy.get('[data-test=\"username\"]').type(\"performance_glitch_user\");\ncy.get('[data-test=\"password\"]').type(\"secret_sauce\");\ncy.get('[data-test=\"login-button\"]').click();\ncy.get('https://www.saucedemo.com/inventory.html').should('be.visible').then(() => {\n  const tempoFinal = date.now();\n  const delta = tempoFinal - tempoInicial;\n  cy.log(\"Tempo de login:\" + delta + \"ms\"); // Uma gambiarra compativel com o site :/ Por enquanto kkkkk.\n  expect(delta).to.be.greaterThan(5000);\n});",
+              "err": {
+                "message": "Error: Syntax error, unrecognized expression: https://www.saucedemo.com/inventory.html",
+                "estack": "Error: Syntax error, unrecognized expression: https://www.saucedemo.com/inventory.html\n    at find.error (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:8298:8)\n    at tokenize (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:8964:8)\n    at select (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:9423:20)\n    at jQuery.find (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:7734:9)\n    at jQuery.fn.init.find (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:9633:11)\n    at new jQuery.fn.init (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:9748:40)\n    at Object.query (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:17942:10)\n    at $Cy.$$ (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:148316:57)\n    at <unknown> (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:135535:18)\n    at Object.subjectFn (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:152178:16)\n    at $Cy.verifyUpcomingAssertions (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:151476:31)\n    at onRetry (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:152169:15)\n    at retryQuery (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:152182:10)\n    at <unknown> (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:152335:17)\n    at tryCatcher (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromiseCtx (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1583:10)\n    at _drainQueueStep (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:2381:12)\n    at _drainQueue (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:2256:14)",
+                "diff": null
+              },
+              "uuid": "09c722a2-65a2-4f34-8a6d-27d5567d76f9",
+              "parentUUID": "031909c1-40fc-4fa9-8239-4cf9e804b693",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "09c722a2-65a2-4f34-8a6d-27d5567d76f9"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6963,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.3.2"
+    }
+  }
+}

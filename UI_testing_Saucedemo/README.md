@@ -32,3 +32,8 @@ Remoção de itens do carrinho;
 Navegação entre páginas;
 Logout;
 Testes automatizados com Cypress.
+
+
+
+
+

@@ -1,0 +1,38 @@
+{
+  "name": "qa_interface_e2e",
+  "version": "1.0.0",
+  "description": "**Aplicação de planejamento e estratégia de projeto do STLC. Inicialmente com teste estático/revisão, manual de E2E utilizando protótipo de site e-commerce e aplicar os fundamentos aprendidos por mim no CTFL para posteriormente iniciar automação.**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pcdajr/QA_Interface_E2E.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/pcdajr/QA_Interface_E2E/issues"
+  },
+  "homepage": "https://github.com/pcdajr/QA_Interface_E2E#readme",
+  "devDependencies": {
+    "cypress": "^13.0.0", 
+    "mocha": "^11.3.0",
+    "mochawesome": "^7.1.3"
+  },
+  "overrides": {
+    "minimist": "^1.2.8",
+    "lodash": "^4.17.21",
+    "handlebars": "^4.7.7",
+    "uuid": "^9.0.0",
+    "diff": "^5.2.0"
+},
+  "dependencies": {
+    "moment": "^2.30.1",
+    "serialize-javascript": "^7.0.5"
+  }
+}

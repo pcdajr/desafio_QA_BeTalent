@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-05-03T05:11:52.044Z",
+    "end": "2026-05-03T05:12:00.231Z",
+    "duration": 8187,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8be39bd1-2d43-4a58-8695-232387558a9c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\pagamento_checkout\\ct14_campos_invalidos.cy.js",
+      "file": "cypress\\e2e\\pagamento_checkout\\ct14_campos_invalidos.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b917d53a-76db-4aea-b877-75c285d33213",
+          "title": "Página de confirmação, pagamento/checkout",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login válido",
+              "fullTitle": "Página de confirmação, pagamento/checkout Login válido",
+              "timedOut": null,
+              "duration": 8014,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-test=\"username\"]').type(\"standard_user\");\ncy.get('[data-test=\"password\"]').type(\"secret_sauce\");\ncy.get('[data-test=\"login-button\"]').click();\n//adicionando 2 produtos \ncy.get('[data-test=\"add-to-cart-sauce-labs-backpack\"]').click();\ncy.get('[data-test=\"add-to-cart-sauce-labs-fleece-jacket\"]').click();\n//clicando no carrrinho\ncy.get('[data-test=\"shopping-cart-link\"]').click();\n// clicando em checkout\ncy.get('[data-test=\"checkout\"]').click();\n// garantindo clicks com campos preenchidos para a asserção.\ncy.get('[data-test=\"firstName\"]').type('1234');\ncy.get('[data-test=\"lastName\"]').type('5678');\ncy.get('[data-test=\"postalCode\"]').type('ACF45@');\ncy.get('[data-test=\"continue\"]').should('be.disabled');\ncy.get('.error-message-container').should('exist');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<input#continue.submit-button.btn.btn_primary.cart_button.btn_action>' to be 'disabled'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<input#continue.submit-button.btn.btn_primary.cart_button.btn_action>' to be 'disabled'\n    at Context.eval (webpack://qa_interface_e2e/./cypress/e2e/pagamento_checkout/ct14_campos_invalidos.cy.js:27:37)",
+                "diff": null
+              },
+              "uuid": "86f8d3ed-dbde-4bbe-9896-247986d5bee3",
+              "parentUUID": "b917d53a-76db-4aea-b877-75c285d33213",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "86f8d3ed-dbde-4bbe-9896-247986d5bee3"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 8014,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.3.2"
+    }
+  }
+}
