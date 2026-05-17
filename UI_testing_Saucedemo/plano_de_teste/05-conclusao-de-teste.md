@@ -1,10 +1,6 @@
 ## **CONCLUSÃO DOS TESTES**
 Com base na execução dos casos de teste nos módulos de Login, Pagamento e Lista de Produtos, foram identificados diversos defeitos críticos que impactam diretamente a experiência do usuário e a confiabilidade do sistema.
 
-- Todos usuarios que conseguiram entrar no sistema conseguiram fazer logout.\
-- 
-
-
 
 ## **SUGESTOES DE MELHORIAS**
 
