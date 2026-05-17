@@ -30,8 +30,3 @@ Com base na execução dos casos de teste nos módulos de Login, Pagamento e Lis
 
 
 
-**Métricas**</br>
-
-<img width="300" height="307" alt="image" src="https://github.com/user-attachments/assets/27f33364-afdd-4059-9e24-e6e8fc484d13" />
-
-
