@@ -19,7 +19,7 @@ Também foi ultilizado o mochawesome e cypresscloud para melhorar no apoio á de
 </BR>
 </BR>
 </BR>
-*️⃣ PARA INFORMAÇÕES DETALHASDAS DENTRO DE CADA PROJETO TEM SEU README.MD
+*️⃣ PARA INFORMAÇÕES DETALHADAS DENTRO DE CADA PROJETO TEM SEU README.MD
 
 
 
