@@ -97,3 +97,41 @@ A collection contendo os endpoints necessários para testar a API estão present
 as variáveis de ambiente citadas em [/workspaces/desafio_QA_BeTalent/API_testing_RestfulBooker/postman/postman_environment.json](https://github.com/pcdajr/desafio_QA_BeTalent/blob/main/API_testing_RestfulBooker/postman/postman_environment.json)
 para utiliza-las basta importar a collection e as variáveis de ambiente no postman ou alguma outra interface semelhante.
 
+## Passos para execução
+
+
+1 - Clonar o repositório\
+2 - Abrir o Postman\
+3 - Importar a collection e o environment\
+4 - Executar os testes manualmente\
+
+## Ordem recomendada para execução
+
+1. Auth
+   - Create Token
+
+2. Booking - Create
+   - Create Booking Success
+   - Required Fields Validation
+   - Invalid Payloads
+
+3. Booking - Get
+   - Get All Bookings
+   - Get Booking by ID
+   - Get Booking by Invalid ID
+   - Get Booking by Filters
+
+4. Booking - Update
+   - Partial Update Booking
+   - Partial Update Booking Fields
+   - Partial Update Booking Dates
+
+5. Booking - Delete
+   - Delete Booking with Cookie Token
+   - Delete Booking with Basic Auth
+   - Validate Deleted Booking
+   - Delete Booking with Invalid Auth
+
+
+
+
