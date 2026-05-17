@@ -43,4 +43,17 @@ A prioridade dos casos de teste foi definida considerando o impacto no fluxo pri
 <img width="1033" height="771" alt="image" src="https://github.com/user-attachments/assets/48e2c940-3167-4f2e-b732-128c07576e3f" />
 
 
+### Observação sobre o status PASS*
+
+O status PASS* foi utilizado para cenários em que o comportamento funcional principal foi atendido, mas foi identificado algum ponto de atenção técnico.
+
+Exemplo:
+
+A reserva foi excluída corretamente;
+A consulta posterior retornou 404 Not Found;
+Porém, o endpoint DELETE retornou 201 Created, status code semanticamente inadequado para uma operação de exclusão.
+
+Nesses casos, o cenário foi considerado funcionalmente aprovado, mas registrado com observação para análise do contrato da API.
+
+
 

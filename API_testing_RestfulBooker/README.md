@@ -81,7 +81,13 @@ API_testing_RestfulBooker/
 | `README.md`                  | Documentação principal do projeto, com instruções de execução e visão geral. |
 
 
-## Variáveis de ambiente
+## Collection com as requisições
+
+A collection contendo os endpoints necessários para testar a API estão presentes em [/workspaces/desafio_QA_BeTalent/API_testing_RestfulBooker/postman/postman_collection.json](https://github.com/pcdajr/desafio_QA_BeTalent/blob/main/API_testing_RestfulBooker/postman/postman_collection.json) e
+as variáveis de ambiente citadas em [/workspaces/desafio_QA_BeTalent/API_testing_RestfulBooker/postman/postman_environment.json](https://github.com/pcdajr/desafio_QA_BeTalent/blob/main/API_testing_RestfulBooker/postman/postman_environment.json)
+para utiliza-las basta importar a collection e as variáveis de ambiente no postman ou alguma outra interface semelhante.
+
+### Variáveis de ambiente
 
 | Variável     | Descrição                             | Exemplo                                |
 | ------------ | ------------------------------------- | -------------------------------------- |
@@ -91,17 +97,13 @@ API_testing_RestfulBooker/
 
 Os itens username e password não foram colocados nas variáveis de ambiente mas eles eram fixos então não teve problema na execução dos testes da API.
 
-A collection contendo os endpoints necessários para testar a API estão presentes em [/workspaces/desafio_QA_BeTalent/API_testing_RestfulBooker/postman/postman_collection.json](https://github.com/pcdajr/desafio_QA_BeTalent/blob/main/API_testing_RestfulBooker/postman/postman_collection.json) e
-as variáveis de ambiente citadas em [/workspaces/desafio_QA_BeTalent/API_testing_RestfulBooker/postman/postman_environment.json](https://github.com/pcdajr/desafio_QA_BeTalent/blob/main/API_testing_RestfulBooker/postman/postman_environment.json)
-para utiliza-las basta importar a collection e as variáveis de ambiente no postman ou alguma outra interface semelhante.
 
-## Passos para execução
+## Passos para execução dos testes
 
 
-1 - Clonar o repositório\
-2 - Abrir o Postman\
-3 - Importar a collection e o environment\
-4 - Executar os testes manualmente
+1 - Abrir o Postman\
+2 - Importar a collection e o environment\
+3 - Executar os testes descritos no arquivo de cenarios e resultado dos testes manualmente
 
 ## Ordem recomendada para execução
 
