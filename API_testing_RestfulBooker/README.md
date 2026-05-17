@@ -103,7 +103,7 @@ para utiliza-las basta importar a collection e as variáveis de ambiente no post
 1 - Clonar o repositório\
 2 - Abrir o Postman\
 3 - Importar a collection e o environment\
-4 - Executar os testes manualmente\
+4 - Executar os testes manualmente
 
 ## Ordem recomendada para execução
 
