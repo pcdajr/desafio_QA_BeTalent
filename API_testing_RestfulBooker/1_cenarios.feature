@@ -9,9 +9,9 @@ Refinando e alinhando o entendimento sobre o sistema da API existente, sua final
 
 ##  Autenticação de Usuário
   
-  Como um usuário da API\
-  Desejo realizar a autenticação\
-  Para obter um token de acesso às rotas protegidas\
+  [Como] um usuário da API\
+  [Quero] realizar a autenticação\
+  [Para] obter um token de acesso às rotas protegidas\
   
   ```gherkin
   Cenário: Gerar token de autenticação com sucesso
@@ -24,9 +24,9 @@ Refinando e alinhando o entendimento sobre o sistema da API existente, sua final
 
 ## Criar Reserva
 
-Como um sistema de reservas ou cliente final,\
-Quero cadastrar uma nova reserva informando os dados do hóspede e do período,\
-Para que a hospedagem seja registrada no sistema e o ID de confirmação seja gerado.\
+[Como] um sistema de reservas ou cliente final,\
+[Quero] cadastrar uma nova reserva informando os dados do hóspede e do período,\
+[Para] que a hospedagem seja registrada no sistema e o ID de confirmação seja gerado.\
 
  ```gherkin
   Cenário: Criar uma nova reserva com sucesso
