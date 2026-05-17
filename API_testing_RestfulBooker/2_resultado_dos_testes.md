@@ -33,7 +33,7 @@ A prioridade dos casos de teste foi definida considerando o impacto no fluxo pri
 <img width="1564" height="249" alt="image" src="https://github.com/user-attachments/assets/2377c6cf-94b4-4405-a1e7-18e72c73e5f9" />
 <img width="1409" height="677" alt="image" src="https://github.com/user-attachments/assets/cabb4a78-f44c-4a0c-95a2-b81be75406ef" />
 <img width="1409" height="475" alt="image" src="https://github.com/user-attachments/assets/8c9cc1e7-b133-4d4f-865c-fd29c3fc38c4" />
-<img width="1410" height="702" alt="image" src="https://github.com/user-attachments/assets/baa8ecba-228a-4523-afb3-38ec79284934" />
+<img width="1410" height="687" alt="image" src="https://github.com/user-attachments/assets/d8ae08e6-336e-4702-9f00-81994e624836" />
 <img width="1409" height="244" alt="image" src="https://github.com/user-attachments/assets/cbf534a7-5445-4318-96ba-3c32c8459b97" />
 
 
