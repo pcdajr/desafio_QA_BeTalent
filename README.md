@@ -1,7 +1,7 @@
 ## 🚀 Nome dos Projetos Integrados 
 1  - Plano de Testes em API RESTFULL BOOKER [https://restful-booker.herokuapp.com/apidoc/index.html]\
 
-2  - Plano de Testes de UI WEB SAUDEDEMO [https://www.saucedemo.com/]
+2  - Plano de Testes de UI WEB SAUCEDEMO [https://www.saucedemo.com/]
 
 
 ## 📂 Organização dos Repositórios
