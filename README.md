@@ -17,8 +17,6 @@
 Também foi ultilizado o mochawesome e cypresscloud para melhorar no apoio á decisão e amostragem das métricas, indicadores e etc.
 </BR>
 </BR>
-</BR>
-</BR>
 *️⃣ PARA INFORMAÇÕES DETALHADAS DENTRO DE CADA PROJETO TEM SEU README.MD
 
 
