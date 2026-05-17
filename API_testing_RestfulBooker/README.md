@@ -4,6 +4,8 @@ Este projeto faz parte de um desafio prático para uma vaga de QA e tem como obj
 
 Além dos testes funcionais, também foram avaliados cenários negativos, validação de campos obrigatórios, comportamento dos status codes, segurança básica, bugs, métricas, riscos e sugestões de melhoria.
 
+Os testes foram executados de forma manual utilizando o Postman para tal mas com variáveis de ambiente e alguns scripts para guardar o token e o id gerado ao criar uma reserva para ser mais dinâmico os testes dos endpoints.
+
 ---
 
 ## API testada
@@ -30,16 +32,13 @@ Análise de bugs;
 Métricas e riscos;
 Sugestões de melhoria.
 
-
-```md
 # Estrutura de Pastas - API Testing Restful Booker
 
-```txt
+```md
 API_testing_RestfulBooker/
 │
 ├── evidencias/
 │   ├── login/
-│   │   └── ct_L1_L2_L3.md
 │   ├── cancel_booking/
 │   ├── edit_booking/
 │   ├── find_booking/
@@ -56,11 +55,10 @@ API_testing_RestfulBooker/
 ├── 4_duvidas_dificuldades.md
 ├── 5_melhorias.md
 └── README.md
-
+```
 
 ## Descrição da estrutura 
 
-```
 
 
 | Caminho                      | Descrição                                                                    |

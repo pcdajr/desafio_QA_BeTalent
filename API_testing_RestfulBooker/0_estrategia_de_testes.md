@@ -2,7 +2,9 @@
 
 ## 1. Objetivo
 
-Este documento descreve os cenários de teste executados na API Restful Booker, contemplando autenticação, criação, consulta, atualização parcial e exclusão de reservas.
+Este documento tem como objetivo alinhar o entendimento sobre o comportamento esperado da API Restful Booker, sua finalidade, possíveis usuários, regras de negócio e principais fluxos funcionais.
+
+Também descreve os cenários de teste elaborados e executados, contemplando autenticação, criação, consulta, atualização e exclusão de reservas.
 
 Os cenários da etapa seguinte foram elaborados com base no desafio proposto para a vaga de QA, utilizando:
 
@@ -22,14 +24,13 @@ Link = https://restful-booker.herokuapp.com/apidoc/index.html
 
 ## Premissas assumidas
 
-| Premissa                 | Descrição                                                                                                                               |
-| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
-| API pública              | A Restful Booker é uma API pública usada para testes e estudos                                                                          |
-| Dados voláteis           | Reservas podem ser alteradas ou removidas por outros usuários                                                                           |
-| Criação sem autenticação | O endpoint de criação permite criar reserva sem token                                                                                   |
-| Campos obrigatórios      | Foram considerados obrigatórios: `firstname`, `lastname`, `totalprice`, `depositpaid`, `bookingdates.checkin` e `bookingdates.checkout` |
-| Campo opcional           | `additionalneeds` foi considerado opcional                                                                                              |
-| Datas válidas            | Foi assumido que `checkout` não deve ser anterior ao `checkin`                                                                          |
-| Preço válido             | Foi assumido que `totalprice` não deve aceitar valor negativo ou nulo                                                                   |
-| PASS com observação      | Usado quando o fluxo funcional ocorreu, mas houve inconsistência técnica                                                                |
-
+| Premissa                 | Descrição                                                                                                                                              |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| API pública              | A Restful Booker é uma API pública utilizada para testes e estudos.                                                                                    |
+| Dados voláteis           | As reservas podem ser criadas, alteradas ou removidas por outros usuários, pois a API é compartilhada publicamente.                                    |
+| Criação sem autenticação | O endpoint de criação de reserva permite criar registros sem token de autenticação.                                                                    |
+| Datas válidas            | Foi assumido que a data de `checkout` não deve ser anterior à data de `checkin`.                                                                       |
+| Preço válido             | Foi assumido que o campo `totalprice` não deve aceitar valor negativo ou nulo.                                                                         |
+| Campo opcional           | O campo `additionalneeds` foi considerado opcional.                                                                                                    |
+| Campos obrigatórios      | Foram considerados obrigatórios os campos `firstname`, `lastname`, `totalprice`, `depositpaid`, `bookingdates.checkin` e `bookingdates.checkout`.      |
+| PASS com observação      | Foi usado quando o fluxo funcional ocorreu corretamente, mas houve inconsistência técnica ou ponto de atenção, representado no relatório como `PASS*`. |
