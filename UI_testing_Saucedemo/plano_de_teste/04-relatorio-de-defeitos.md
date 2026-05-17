@@ -15,3 +15,10 @@
 
 
 
+## Ranking das Funcionalidades com Maior Impacto de Bugs
+
+| Ranking | Funcionalidade | Total de casos | FAIL | % Erro real | Classificação do risco | Justificativa |
+| :---: | :--- | :---: | :---: | :---: | :---: | :--- |
+| **1º** | Pagamento (Checkout) | 5 | 3 | 60,00% | **ALTO (Crítico)** | Erros graves de integridade e validação de dados. O sistema aceita dados inválidos em campos obrigatórios (CT14) e quebra a entrada de teclado do usuário com contas problemáticas (CT15 e CT16), impedindo a conclusão segura da compra. |
+| **2º** | Lista de Produtos | 5 | 3 | 60,00% | **ALTO** | Gargalos funcionais e visuais expressivos na experiência de e-commerce. Apresenta falhas na limitação de adição de itens (CT09), renderização incorreta de imagens (CT10) e quebra total de ordenação/filtros (CT11) com usuários de teste específicos. |
+| **3º** | Login / Autenticação | 6 | 1 | 16,67% | **MÉDIO** | A maior parte das validações básicas de segurança e restrição de acesso passou com êxito. O único ponto crítico reside na degradação de performance não-funcional (Glitch de tempo) ao autenticar o usuário sob estresse (CT06). |
